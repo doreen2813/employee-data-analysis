@@ -30,3 +30,9 @@ grouped analysis, visualization, and documentation.
 ## Data Disclaimer
 The employee dataset is fictional and is intended
 for learning and demonstration purposes only.# employee-data-analysis
+## Salary Analysis Chart
+
+The chart below compares average monthly salaries
+across the Sales, IT, and HR departments.
+
+![Average Monthly Salary by Department](reports/employee_salary_chart.png)
