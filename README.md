@@ -36,3 +36,9 @@ The chart below compares average monthly salaries
 across the Sales, IT, and HR departments.
 
 ![Average Monthly Salary by Department](reports/employee_salary_chart.png)
+## Employee Experience Analysis
+
+This chart compares average years of experience
+across the Sales, IT, and HR departments.
+
+![Average Years of Experience by Department](reports/employee_experience_chart.png)
