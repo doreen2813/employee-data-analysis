@@ -1,0 +1,24 @@
+# Calculate average years of experience by department
+department_experience <- aggregate(
+  Years_Experience ~ Department,
+  data = employees,
+  FUN = mean
+)
+
+# Save the experience chart
+png(
+  "reports/employee_experience_chart.png",
+  width = 1000,
+  height = 700
+)
+
+barplot(
+  department_experience$Years_Experience,
+  names.arg = department_experience$Department,
+  main = "Average Years of Experience by Department",
+  xlab = "Department",
+  ylab = "Average Years of Experience",
+  col = "darkgreen"
+)
+
+dev.off()
