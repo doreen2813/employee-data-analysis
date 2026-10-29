@@ -1,0 +1,45 @@
+# Employee Data Analysis Project
+# Created by Doreen Ng'endo
+
+# 1. Create a sample employee dataset
+employees <- data.frame(
+  Employee_ID = 1:8,
+  Department = c(
+    "Sales", "IT", "HR", "Sales",
+    "IT", "HR", "Sales", "IT"
+  ),
+  Monthly_Salary = c(
+    35000, 55000, 40000, 42000,
+    60000, 45000, 38000, 58000
+  ),
+  Years_Experience = c(2, 5, 3, 4, 7, 4, 2, 6)
+)
+
+# 2. View the dataset
+print(employees)
+
+# 3. Calculate summary statistics
+cat("Average monthly salary:",
+    mean(employees$Monthly_Salary), "\n")
+
+cat("Average years of experience:",
+    mean(employees$Years_Experience), "\n")
+
+# 4. Calculate average salary by department
+department_salary <- aggregate(
+  Monthly_Salary ~ Department,
+  data = employees,
+  FUN = mean
+)
+
+print(department_salary)
+
+# 5. Create a bar chart
+barplot(
+  department_salary$Monthly_Salary,
+  names.arg = department_salary$Department,
+  main = "Average Monthly Salary by Department",
+  xlab = "Department",
+  ylab = "Average Monthly Salary",
+  col = "steelblue"
+)
